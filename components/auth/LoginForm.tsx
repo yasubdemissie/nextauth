@@ -1,14 +1,16 @@
 import { CardWrapper } from "./CardWrapper";
+import { SignInForm } from "./SingInForm";
 
-export default function LoginForm() {
+export default async function LoginForm({ type }: { type: "login" | "register"}) {
   return (
     <CardWrapper
       headerLabel="Login"
       backButtonLabel="Don't have an account"
-      backButtonHref="/auth/login"
+      backButtonHref={type === "login" ? "/auth?sign=register" : "/auth?sign=login"}
       showSocial={true}
     >
-      Login Form
+      <SignInForm type={type} />
+      {/* <InputShad type="password" name="password" /> */}
     </CardWrapper>
   );
 }

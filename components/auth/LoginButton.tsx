@@ -15,7 +15,7 @@ export function LoginButton({
 }: loginButtonProps) {
   const router = useRouter();
   function onClick() {
-    router.push("/auth/login");
+    router.push("/auth?sign=login");
   }
 
   if (mode === "modal") {
