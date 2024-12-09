@@ -14,7 +14,7 @@ export function SignInForm({ type }: { type: "login" | "register" }) {
   });
   const [registerState, regAction, regLoading] = useActionState(
     registerAction,
-    { error: undefined, data: { name: "", email: "", username: "" } }
+    { error: undefined, success: undefined, data: { name: "", email: "", username: "" } }
   );
 
   if (type === "login") {
@@ -50,6 +50,9 @@ export function SignInForm({ type }: { type: "login" | "register" }) {
         <>
           {registerState?.error && (
             <ErrorMessage>{registerState.error}</ErrorMessage>
+          )}
+          {registerState?.success && (
+            <ErrorMessage>{registerState.success}</ErrorMessage>
           )}
         </>
         <Button

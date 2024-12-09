@@ -8,6 +8,6 @@ export async function loginAction(
   const validatedData = loginSchema.safeParse(data);
 
   if (!validatedData.success) return { error: "Incorrect name or password. Try again" };
-  console.log("loginAction", data);
+  // console.log("loginAction", data);
   return { success: "The data reveived successfully", data: data };
 }

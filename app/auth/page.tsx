@@ -9,7 +9,6 @@ export default async function SignInPage({
 }) {
   const searchParam = await searchParams;
   const sign = searchParam?.sign || "login";
-  console.log(sign);
 
   return <LoginForm type={sign === "login" || sign === "register" ? sign : "login"} />;
 }

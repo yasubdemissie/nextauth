@@ -9,7 +9,7 @@ export function Social() {
     <div className="w-full flex items-center gap-x-2">
       <Button
         variant={"outline"}
-        onClick={() => console.log("clicked")}
+        // onClick={() => console.log("clicked")}
         size={"lg"}
         className="w-full"
       >
@@ -17,7 +17,7 @@ export function Social() {
       </Button>
       <Button
         variant={"outline"}
-        onClick={() => console.log("clicked")}
+        // onClick={() => console.log("clicked")}
         size={"lg"}
         className="w-full"
       >
